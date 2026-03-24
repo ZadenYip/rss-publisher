@@ -1,0 +1,36 @@
+# For detailed specification of the config file, see the RSS 2.0 specification
+# https://www.rssboard.org/rss-specification
+
+[channel.required]
+
+# Title of the channel exp. "My Blog"
+title = ""
+
+# HTML website URL for the channel
+# example: https://www.example.com
+link = ""
+
+# Description of the channel
+description = ""
+
+# TODO: future support for the following optional fields
+# [channel.optional]
+
+# # the language the channel is written in, exp. "en-us"
+# language = ""
+
+# copyright = ""
+# managingEditor = ""
+# webMaster = ""
+# pubDate = ""
+# lastBuildDate = ""
+# category = ""
+# generator = ""
+# docs = ""
+# cloud = ""
+# ttl = ""
+# image = ""
+# rating = ""
+# textInput = ""
+# skipHours = ""
+# skipDays = ""
