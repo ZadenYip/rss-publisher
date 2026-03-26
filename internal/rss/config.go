@@ -21,19 +21,19 @@ type Config struct {
 	} `toml:"channel"`
 }
 
-func ReadChannelConfig(path string) (Config, error) {
+func ReadChannelConfig(path string) (*Config, error) {
 
 	data, err := os.ReadFile(path)
 
 	if err != nil {
-		return Config{}, fmt.Errorf("failed to read config file: %w", err)
+		return nil, fmt.Errorf("failed to read config file: %w", err)
 	}
 
 	var config Config
 	err = toml.Unmarshal(data, &config)
 	if err != nil {
-		return Config{}, fmt.Errorf("failed to unmarshal config file: %w", err)
+		return nil, fmt.Errorf("failed to unmarshal config file: %w", err)
 	}
 
-	return config, nil
+	return &config, nil
 }
