@@ -1,18 +1,11 @@
-package rss
+package common
 
 import "encoding/xml"
 
 type Feed struct {
 	XMLName xml.Name `xml:"rss"`
 	Version string   `xml:"version,attr"`
-	Channel Channel  `xml:"channel"`
-}
-
-func NewFeed(channel Channel) Feed {
-	return Feed{
-		Version: "2.0",
-		Channel: channel,
-	}
+	Channel *Channel `xml:"channel"`
 }
 
 type Channel struct {
@@ -46,12 +39,12 @@ type Item struct {
 	Title       string `xml:"title"`
 	Description string `xml:"description"`
 
-	// Link      string `xml:"link"`
-	// Author    string `xml:"author,omitempty"`
-	// Category  string `xml:"category,omitempty"`
-	// Comments  string `xml:"comments,omitempty"`
-	// Enclosure string `xml:"enclosure,omitempty"`
-	// Guid      string `xml:"guid,omitempty"`
-	// PubDate   string `xml:"pubDate,omitempty"`
-	// Source    string `xml:"source,omitempty"`
+	Link      string `xml:"link"`
+	Author    string `xml:"author,omitempty"`
+	Category  string `xml:"category,omitempty"`
+	Comments  string `xml:"comments,omitempty"`
+	Enclosure string `xml:"enclosure,omitempty"`
+	Guid      string `xml:"guid,omitempty"`
+	PubDate   string `xml:"pubDate,omitempty"`
+	Source    string `xml:"source,omitempty"`
 }
