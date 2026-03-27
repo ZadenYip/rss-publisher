@@ -1,0 +1,5 @@
+[channel.required]
+
+title = "Channel Title"
+link = "https://www.github.com"
+description = "A test RSS channel"
